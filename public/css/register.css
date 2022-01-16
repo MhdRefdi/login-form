@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, salmon, skyblue);
+}
+.container {
+  background-color: white;
+  border-radius: 10px;
+  font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", sans-serif;
+  padding: 40px 150px;
+}
+.container h1 {
+  font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", sans-serif;
+  text-align: center;
+}
+.line {
+  margin: auto;
+  height: 3px;
+  width: 130px;
+  background: linear-gradient(135deg, salmon, skyblue);
+}
+/* Username */
+
+.text-field {
+  margin: 20px 0;
+}
+.text-field label {
+  color: rgba(25, 25, 25, 0.8);
+  font-weight: 600;
+  margin-left: 5px;
+}
+.text-field input {
+  width: 100%;
+}
+
+/* Eror Password */
+.text-field-error {
+  margin: 2px 0;
+  font-size: 16px;
+  text-align: center;
+  color: red;
+}
+
+.text-field-error ul {
+  list-style: none;
+}
+
+/* Input */
+
+.container .text-field input {
+  padding: 10px 0;
+  border: none;
+  box-shadow: -2px 2px 3px 0 rgba(32, 32, 32, 0.8);
+  border-radius: 5px;
+  transition: all 0.5s ease;
+}
+/* Button */
+
+.button {
+  display: flex;
+  flex-direction: column;
+}
+.button button {
+  width: 100%;
+  border: none;
+  background-color: #2680c2;
+  padding: 12px 0;
+  border-radius: 10px;
+  box-shadow: 0 3px 0 0 #266fa5;
+  margin-bottom: 10px;
+  cursor: pointer;
+  color: white;
+  font-weight: 600;
+  font-size: 15px;
+}
+.button button:hover {
+  box-shadow: none;
+  transform: translateY(5px);
+}
+.button span a {
+  text-decoration: none;
+  color: skyblue;
+}
+.button span a:hover {
+  text-decoration: underline;
+  color: salmon;
+}
