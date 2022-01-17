@@ -32,14 +32,25 @@ class Pages extends BaseController
         $username = $this->request->getVar('username');
         $password = $this->request->getVar('password');
         $result = $this->loginModel->where(['username' => $username])->first();
-        if ($result['username'] == $username && password_verify($password, $result['password'])) {
 
-            session()->set('login', true);
-            return redirect()->to('/pages/dashboard');
-            
+        $data = [
+            'validation' => \Config\Services::validation()
+        ];
+
+        if($result != NULL){
+            if ($result['username'] == $username && password_verify($password, $result['password'])) {
+                session()->set('login', true);
+                return redirect()->to('/pages/dashboard');
+            }else {
+                session()->setFlashdata('erorp', 'password anda salah');
+            return view('form/login');
+            }
+        }else {
+            session()->setFlashdata('eroru', 'username tidak terdaftar');
+            return view('form/login');
         }
         
-        return view('form/login');
+        
     }
     
     public function remove()
@@ -73,7 +84,7 @@ class Pages extends BaseController
                 ]
                 ],
             
-            'password' => [
+            'cpassword' => [
                 'rules' => 'required|is_unique[users.username]|min_length[8]|max_length[16]',
                 'errors' => [
                     'required' => 'harap isi bidang ini',
@@ -86,6 +97,8 @@ class Pages extends BaseController
                 'rules' => 'required|is_unique[users.username]|min_length[8]|max_length[16]',
                 'errors' => [
                     'required' => 'harap isi bidang ini',
+                    'min_length' => 'minimal 8 karakter',
+                    'max_length' => 'maksimal 16 karakter',
                 ]
                 ],
 

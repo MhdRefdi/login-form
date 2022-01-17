@@ -24,6 +24,11 @@
                     </label>
                     <input id="username" name="username" type="text">
                     </input>
+                    <?php if(session()->getFlashdata('eroru')) : ?>
+                        <div class="text-field-error">
+                            <?= session()->getFlashdata('eroru'); ?>
+                        </div>
+                    <?php endif; ?>
                 </div>
                 <div class="password">
                     <label for="password">
@@ -31,6 +36,11 @@
                     </label>
                     <input id="password" name="password" type="password">
                     </input>
+                    <?php if(session()->getFlashdata('erorp')) : ?>
+                        <div class="text-field-error">
+                            <?= session()->getFlashdata('erorp'); ?>
+                        </div>
+                    <?php endif; ?>
                 </div>
                 <div class="button">
                     <button type="submit">

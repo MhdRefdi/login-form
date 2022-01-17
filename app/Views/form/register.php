@@ -37,7 +37,7 @@
                     <input id="nama" name="nama" type="text" value="<?= old('nama'); ?>">
                     </input>
                     <div class="text-field-error">
-                        <?= $validation->getError('password'); ?>
+                        <?= $validation->getError('nama'); ?>
                     </div>
                 </div>
                 
