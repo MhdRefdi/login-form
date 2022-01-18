@@ -47,9 +47,9 @@
                     </label><br>
                     <input id="password" name="password" type="password">
                     </input>
-                    <?php if(session()->getFlashdata('eror')) : ?>
+                    <?php if(session()->getFlashdata('pesan_pass')) : ?>
                         <div class="text-field-error">
-                            <?= session()->getFlashdata('eror'); ?>
+                            <?= session()->getFlashdata('pesan_pass'); ?>
                         </div>
                     <?php endif; ?>
                     <div class="text-field-error">
