@@ -38,6 +38,7 @@ body {
 }
 .text-field input {
   width: 100%;
+  outline: none;
 }
 
 /* Eror Password */

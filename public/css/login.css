@@ -38,11 +38,13 @@ body {
 }
 .username input {
   width: 100%;
+  outline: none;
 }
 /* Password */
 
 .password {
   margin-bottom: 20px;
+  outline: none;
 }
 .password label {
   color: rgba(25, 25, 25, 0.8);
